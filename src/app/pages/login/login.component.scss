@@ -1,0 +1,46 @@
+.btn-color{
+  background: #14F7A6 ;
+  color: black;
+  outline:none;
+}
+.G{
+  color: #3BA140 ;
+}
+h2{
+  margin-left: auto ;
+  margin-right: auto ;
+}
+.banner{
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+    background-image: url('../../../assets/images/molinosbgjpg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.mat-toolbar{
+  position: fixed;
+  z-index: 1;
+}
+
+.eolico{
+  height: 2rem;
+  cursor: pointer;
+}
+
+.solar-panel{
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.divider-border{
+  border-right: 2px solid #DFD6D6 ;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto ;
+}
