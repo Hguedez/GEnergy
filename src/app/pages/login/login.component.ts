@@ -19,6 +19,13 @@ export class LoginComponent implements OnInit {
     this.ValidateForms();
   }
 
+  openSnackBar(message: string){
+    this._snackBar.open(message, '', {
+      duration: 3000,
+      panelClass: ['green-snackbar']
+    });
+  }
+
   loginUser(){
     let formData = new FormData();
     formData.append('Email', this.loginForm.get('Email').value);
@@ -30,5 +37,9 @@ export class LoginComponent implements OnInit {
       Email: ['',Validators.compose([Validators.required])],
       Password: ['',Validators.compose([Validators.required])]
     })
+  }
+
+  deviceSelected(){
+    this.openSnackBar('Device selected');
   }
 }

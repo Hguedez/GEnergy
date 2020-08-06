@@ -15,6 +15,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSelectModule} from '@angular/material/select';
 
 const MaterialComponents = [
     MatMenuModule,
@@ -32,7 +33,8 @@ const MaterialComponents = [
     MatTableModule,
     MatFormFieldModule,
     FlexLayoutModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSelectModule
 ];
 
 @NgModule({
