@@ -6,8 +6,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #14F7A6 !important;
   }
 
-  .mat-form-field-appearance-outline.mat-focused .mat-form-field-label { 
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-label { 
     color: black !important; 
 }
+
+.green-snackbar {
+    background: linear-gradient(to right, #2D9B8A , #3AB3A1 );
+}
+
+.mat-form-field-ripple {
+    background:  #14F7A6 !important;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

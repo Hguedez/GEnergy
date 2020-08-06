@@ -1,0 +1,29 @@
+.G{
+    color: #3BA140 ;
+  }
+  mat-form-field{
+    width: 20rem;
+  }
+
+/* to change arrow when focused */
+.mat-select:focus:not(.mat-select-disabled) .mat-select-arrow {
+    color: black !important;
+}    
+
+/* to change placeholder text when focused */
+.mat-select:focus:not(.mat-select-disabled) .mat-select-trigger {
+    color: black !important;
+}
+.mat-form-field-appearance-fill.mat-focused .mat-form-field-label{
+    color:#3BA140 !important;
+}
+/* to change selected item color in the select list */
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: black !important;
+}
+
+.ready{
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}

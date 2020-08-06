@@ -9,32 +9,33 @@
 <mat-toolbar class="container-fluid mat-toolbar">
   <div class="row d-flex align-items-center">
       <div class="col-5 d-flex justify-content-center">
-        <a href="#">
+        <a [routerLink]="'/'" (click)="deviceSelected()">
           <img src="../../../assets/images/eolico.png" class="eolico">
         </a>
       </div>
       <span class="divider-border"></span>
       <div class="col-5 d-flex justify-content-center">
-        <a href="#">
+        <a [routerLink]="'/'" (click)="deviceSelected()">
           <img src="../../../assets/images/solar-panel.png" class="solar-panel">
         </a>
       </div>
   </div>
 </mat-toolbar>
 <div fxLayout fxLayoutAlign="center center " style="height: 100%;position: absolute;" class="banner">
-  <mat-card>
+  <mat-card class="mat-card">
     <form class="example-form " [formGroup]="loginForm" (ngSubmit)="loginUser()">
       <mat-card-content fxLayout="column">
         <h2><strong class="G">G</strong><strong>E</strong>nergy</h2>
         <mat-form-field appearance="outline" >
           <mat-label>Email</mat-label>
-          <input matInput formControlName="Email" >
+          <input matInput formControlName="Email" type="email">
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
+          <mat-label>Contraseña</mat-label>
           <input matInput formControlName="Password" type="password">
         </mat-form-field>
-        <button mat-raised-button class="btn-color" type="submit" [disabled]="loginForm.invalid || disabled"><strong>SIGN IN</strong></button>
+        <button mat-raised-button class="btn-color" type="submit" [disabled]="loginForm.invalid || disabled"><strong>Iniciar sesion</strong></button>
+        <a href="#" class="register-hyperlink mt-3" [routerLink]="'/register'">Registrar</a>
       </mat-card-content>
     </form>
     </mat-card>
