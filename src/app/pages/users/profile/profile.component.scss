@@ -1,0 +1,35 @@
+.G{
+    color: #3BA140 ;
+  }
+
+.inline-center { 
+    display: inline-block;
+    margin-left: auto !important;
+    margin-right: auto !important; 
+}
+
+.inline-right{
+    float: right;
+}
+
+table {
+    width: 100%;
+  }
+
+  th.mat-header-cell {
+    text-align: center;
+}
+
+td.mat-cell {
+    border: none !important;
+    text-align: center !important;
+}
+
+th.mat-header-cell{
+    border-color: #14F7A6 !important;
+}
+
+.progress{
+    width: 80%;
+    height: 1%;
+}

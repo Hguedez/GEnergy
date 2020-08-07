@@ -16,6 +16,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 const MaterialComponents = [
     MatMenuModule,
@@ -34,7 +36,9 @@ const MaterialComponents = [
     MatFormFieldModule,
     FlexLayoutModule,
     MatButtonToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressBarModule,
+    MatSlideToggleModule
 ];
 
 @NgModule({
