@@ -5,6 +5,7 @@ import { ConfigComponent } from './pages/users/config/config.component';
 import { ProfileComponent } from './pages/users/profile/profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ReportsComponent } from './pages/reports/reports.component';
 
 const routes: Routes = [
   { path: '', component:LoginComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'profile', component:ProfileComponent},
   { path: 'statistics', component:StatisticsComponent},
   { path: 'config', component:ConfigComponent},
+  { path: 'reports', component:ReportsComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

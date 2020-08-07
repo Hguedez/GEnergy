@@ -1,0 +1,15 @@
+.G{
+    color: #3BA140 ;
+  }
+
+  .container {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin: 0 auto;
+  }
+  
+  .selected { 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #14F7A6 ;
+  }

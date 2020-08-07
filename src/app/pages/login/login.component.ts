@@ -40,6 +40,6 @@ export class LoginComponent implements OnInit {
   }
 
   deviceSelected(){
-    this.openSnackBar('Device selected');
+    this.openSnackBar('Dispositivo seleccionado');
   }
 }
