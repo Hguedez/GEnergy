@@ -18,5 +18,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background:  #14F7A6 !important;
 }
 
+.mat-progress-bar-fill::after {
+    background-color: #14F7A6;
+}
+.mat-progress-bar-buffer {
+    background: #B5FCE4 ;
+}
+
+.mat-slide-toggle-bar {
+    background-color: #DDE4E2;
+  }
+
+  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color:  #14F7A6 ;
+  }
+  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #F5FAF8 ;
+  }
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

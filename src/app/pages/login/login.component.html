@@ -34,8 +34,8 @@
           <mat-label>Contraseña</mat-label>
           <input matInput formControlName="Password" type="password">
         </mat-form-field>
-        <button mat-raised-button class="btn-color" type="submit" [disabled]="loginForm.invalid || disabled"><strong>Iniciar sesion</strong></button>
-        <a href="#" class="register-hyperlink mt-3" [routerLink]="'/register'">Registrar</a>
+        <button mat-raised-button class="btn-color" type="submit" [disabled]="loginForm.invalid || disabled" [routerLink]="'/profile'"><strong>Iniciar sesion</strong></button>
+        <a href="#" class="mx-auto mt-3" [routerLink]="'/register'">Registrar</a>
       </mat-card-content>
     </form>
     </mat-card>
