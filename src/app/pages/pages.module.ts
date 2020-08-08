@@ -8,9 +8,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ReportsComponent } from './reports/reports.component';
 import { ChartsModule } from 'ng2-charts';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 @NgModule({
-  declarations: [StatisticsComponent,ConfigComponent,ProfileComponent,LoginComponent,RegisterComponent, ReportsComponent],
+  declarations: [StatisticsComponent,ConfigComponent,ProfileComponent,LoginComponent,RegisterComponent, ReportsComponent, AdminHomeComponent],
   imports: [
     CommonModule,
     SharedModule,

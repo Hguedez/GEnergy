@@ -1,0 +1,29 @@
+.G{
+    color: #3BA140 ;
+  }
+
+  h3,h4{
+    font-weight: 600;
+    font-size: large;
+}
+
+.selected-eolico { 
+    border-width: 1px 1px 1px 1px; /* top right bottom left */
+    border-style: solid solid solid solid;
+    border-color: #14F7A6  #14F7A6 #FFFFFF  #14F7A6 ;
+  }
+  .selected-solar { 
+    border-width: 1px 1px 1px 1px; /* top right bottom left */
+    border-style: solid solid solid solid;
+    border-color: #FFFFFF  #14F7A6  #14F7A6 #14F7A6 ;
+  }
+  
+  /* Structure */
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
