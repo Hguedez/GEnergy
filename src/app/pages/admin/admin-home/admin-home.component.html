@@ -1,0 +1,137 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <div>
+        <button mat-icon-button  [routerLink]="'/profile'" style="display: none;position: absolute;">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+    </div>
+    <div>
+        <h2 class="inline-center d-flex justify-content-center"><strong class="G ">G</strong><strong>E</strong>nergy</h2>
+    </div>
+    <div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="inline-right">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Perfil</span>
+            </button>
+            <button mat-menu-item [routerLink]="'/statistics'">
+                <mat-icon>leaderboard</mat-icon>
+                <span>Reportes</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>settings</mat-icon>
+                <span>Configuracion</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>help</mat-icon>
+                <span>Ayuda</span>
+            </button>
+            <button mat-menu-item (click)="logOut()">
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Cerrar sesion</span>
+                </button>
+            </mat-menu>
+    </div>
+</mat-toolbar>
+<mat-progress-bar *ngIf="sploaded==true" mode="indeterminate"></mat-progress-bar>
+<mat-accordion *ngIf="sploaded==false">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false" class="selected-eolico">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Dispositivos eolicos
+        </mat-panel-title>
+        <mat-panel-description>
+          Categorias
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <div class="d-flex justify-content-center">
+            <h3>Aerogenerador</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="../../../../assets/images/aerogenerador.jpg" class="img-fluid">
+        </div>
+        <div class="d-flex justify-content-center mt-1">
+            <h3>Multipala de bombeo</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="../../../../assets/images/multipala.jpg" class="img-fluid">
+        </div>
+        <div class="d-flex justify-content-center mt-1">
+            <h3>Molino de viento</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="../../../../assets/images/molinodeviento.jpg" class="img-fluid">
+        </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion *ngIf="sploaded==false">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false" class="selected-solar">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Dispositivos solares
+        </mat-panel-title>
+        <mat-panel-description>
+          Categorias
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <div class="d-flex justify-content-center">
+            <h3>Fotovoltaico</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="../../../../assets/images/fotovoltaico.jpg" class="img-fluid">
+        </div>
+        <div class="d-flex justify-content-center mt-1">
+            <h3>Termico</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="../../../../assets/images/termico.jpg" class="img-fluid">
+        </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+    <div class="d-flex justify-content-center" *ngIf="sploaded==false">
+        <h4>Miembros</h4>
+    </div>
+  <mat-form-field class="mt-2" *ngIf="sploaded==false">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="sploaded==false">
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
