@@ -187,4 +187,5 @@ export class StatisticsComponent implements OnInit {
       40];
     this.barChartData[0].data = data;
   }
+  
  }

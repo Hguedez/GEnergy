@@ -62,11 +62,8 @@
                    <div class="d-flex justify-content-center mt-2">
                     <button mat-button [matMenuTriggerFor]="belowMenu" class="statisticsMenu"><strong>Opciones</strong></button>
                     <mat-menu #belowMenu="matMenu" yPosition="below">
-                    <button mat-menu-item (click)="randomize()">Reiniciar prediccion</button>
                     <button mat-menu-item (click)="pushOne()">Agregar columna</button>
-                    <button mat-menu-item (click)="randomize()">Reiniciar prediccion</button>
                     <button mat-menu-item (click)="changeColor()">Cambiar color</button>
-                    <button mat-menu-item (click)="hideOne()">Eliminar promedio general</button>
                     <button mat-menu-item (click)="changeLabel()">Comprimir fondo</button>
                     </mat-menu>
                    </div>
