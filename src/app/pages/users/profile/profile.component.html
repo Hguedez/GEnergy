@@ -12,9 +12,17 @@
         <mat-icon>leaderboard</mat-icon>
         <span>Reportes</span>
     </button>
+    <button mat-menu-item [routerLink]="'/statistics'">
+        <mat-icon>notifications</mat-icon>
+        <span>Anuncios</span>
+    </button>
     <button mat-menu-item>
         <mat-icon>settings</mat-icon>
         <span>Configuracion</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>help</mat-icon>
+        <span>Ayuda</span>
     </button>
     <button mat-menu-item (click)="logOut()">
         <mat-icon>exit_to_app</mat-icon>
@@ -26,7 +34,7 @@
 <div class="container-fluid mt-2" *ngIf="sploaded==false">
     <div class="row">
         <div class="col-12 d-flex justify-content-start">
-            <mat-slide-toggle>Enceder dispositivo</mat-slide-toggle>
+            <mat-slide-toggle>Encender dispositivo</mat-slide-toggle>
         </div>
     </div>
 </div>
